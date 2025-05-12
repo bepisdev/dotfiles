@@ -5,11 +5,21 @@
 
 # Process package manifest
 CSV_FILE="pkg.csv"
-tail -n +2 "$CSV_FILE" | while IFS=',' read -r pkgname type options
+tail -n +2 "$CSV_FILE" | while IFS=',' read -r pkgname pkgtype clioptions
 do
     echo "Column 1: $pkgname"
-    echo "Column 2: $type"
-    echo "Column 3: $options"
     echo "----"
+
+    case $pkgtype in
+        "formula")
+            brew install $pkgname $options
+            ;;
+        "cask")
+            brew install --cask $pkgname $options
+            ;;
+        "git")
+            git clone $pkgname $options
+            ;;
+    esac
 done
 

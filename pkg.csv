@@ -17,3 +17,5 @@ zplug,formula,
 pure,formula,
 zsh,formula,
 emacs-plus@31,formula,--with-dbus --with-imagemagick --with-modern-papirus-icon
+neofetch,formula,
+ispell,formula,
