@@ -10,6 +10,9 @@ zplug "plugins/common-aliases", from:oh-my-zsh
 zplug "zsh-users/zsh-history-substring-search"
 zplug 'dracula/zsh', as:theme
 
+alias pip="pip3"
+alias python="python3"
+
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
 autoload -U promptinit; promptinit
 prompt pure
