@@ -35,6 +35,7 @@ pushd $DOTFILES_DIR
 stow zsh -t $HOME
 stow emacs -t $HOME
 stow git -t $HOME
+stow ghostty -t $HOME/Library/Application\ Support/com.mitchellh.ghostty
 popd
 
 # Run doom emacs setup utility
