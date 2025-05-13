@@ -1,7 +1,10 @@
-export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
 export ZPLUG_HOME=/opt/homebrew/opt/zplug
-
 source $ZPLUG_HOME/init.zsh
+
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+export PATH="$PATH:/Users/joshburns/.local/bin"
+export PATH="$PATH:/$(go env GOPATH)/bin"
 
 zplug "plugins/macos", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
@@ -10,12 +13,10 @@ zplug "plugins/common-aliases", from:oh-my-zsh
 zplug "zsh-users/zsh-history-substring-search"
 zplug 'dracula/zsh', as:theme
 
-alias pip="pip3"
-alias python="python3"
-
-fpath+=("$(brew --prefix)/share/zsh/site-functions")
 autoload -U promptinit; promptinit
-prompt pure
+autoload -U compinit && compinit
+
+eval "$(register-python-argcomplete pipx)"
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -26,5 +27,6 @@ if ! zplug check --verbose; then
 fi
 
 zplug load
+prompt pure
 
 neofetch
