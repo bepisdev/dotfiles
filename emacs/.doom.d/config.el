@@ -9,7 +9,7 @@
 (setq user-full-name "Josh Burns"
       user-mail-address "joshyburnss@gmail.com")
 
-Doom exposes five (optional) variables for controlling fonts in Doom:
+;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
 ;; - `doom-font' -- the primary font to use
 ;; - `doom-variable-pitch-font' -- a non-monospace font (where applicable)
