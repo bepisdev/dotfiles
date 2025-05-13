@@ -1,3 +1,5 @@
+alias dsstoreclean='find . -type f -name .DS_Store -delete'
+
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
 export ZPLUG_HOME=/opt/homebrew/opt/zplug
 source $ZPLUG_HOME/init.zsh
@@ -18,6 +20,8 @@ autoload -U compinit && compinit
 
 eval "$(register-python-argcomplete pipx)"
 
+neofetch
+
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
@@ -28,5 +32,3 @@ fi
 
 zplug load
 prompt pure
-
-neofetch
