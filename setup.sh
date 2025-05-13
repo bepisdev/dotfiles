@@ -29,13 +29,13 @@ do
     esac
 done
 
-# Link dotfiles with stow
+# Create symlinks for dotfiles
 DOTFILES_DIR="$HOME/Code/dotfiles"
-mkdir -p $DOTFILES_DIR
-
-(cd $DOTFILES_DIR && stow zsh -t $HOME)
-(cd $DOTFILES_DIR && stow emacs -t $HOME)
-(cd $DOTFILES_DIR && stow git -t $HOME)
+pushd $DOTFILES_DIR
+stow zsh -t $HOME
+stow emacs -t $HOME
+stow git -t $HOME
+popd
 
 # Run doom emacs setup utility
 ~/.emacs.d/bin/doom install
