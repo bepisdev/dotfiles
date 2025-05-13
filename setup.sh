@@ -15,13 +15,13 @@ do
 
     case $pkgtype in
         "formula")
-            brew install $pkgname $options
+            brew install $pkgname $clioptions
             ;;
         "cask")
-            brew install --cask $pkgname $options
+            brew install --cask $pkgname $clioptions
             ;;
         "git")
-            git clone $pkgname $options
+            git clone $pkgname $clioptions
             ;;
     esac
 done
