@@ -7,7 +7,7 @@
 CSV_FILE="pkg.csv"
 tail -n +2 "$CSV_FILE" | while IFS=',' read -r pkgname pkgtype clioptions
 do
-    echo "Column 1: $pkgname"
+    echo "Installing Package: $pkgname"
     echo "----"
 
     case $pkgtype in
@@ -23,3 +23,6 @@ do
     esac
 done
 
+# Link dotfiles with stow
+DOTFILES_DIR="$HOME/Code/dotfiles"
+(cd $DOTFILES_DIR && stow zsh -t $HOME)

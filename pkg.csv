@@ -21,3 +21,5 @@ neofetch,formula,
 ispell,formula,
 stow,formula,
 cmake,formula,
+https://github.com/doomemacs/doomemacs,git,$HOME/.emacs.d
+https://github.com/bepisdev/dotfiles,git,$HOME/Code/dotfiles
