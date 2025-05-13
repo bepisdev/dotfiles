@@ -1,5 +1,7 @@
 # Clean up dotfiles in the current directory tree
 alias dsstoreclean='find . -type f -name .DS_Store -delete'
+alias te="emacs -nw"
+alias e=" open /Applications/Emacs.app"
 
 # Load zplug
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
