@@ -81,7 +81,6 @@
 ;; Map .astro files to web-mode
 (add-to-list 'auto-mode-alist '("\\.astro\\'" . web-mode))
 
-
 ;; Copilot
 ;; accept completion from copilot and fallback to company
 (use-package! copilot
@@ -105,14 +104,16 @@
   ;; Bind the custom function to <tab> in Evil's insert state
   (evil-define-key 'insert 'global (kbd "<tab>") 'my/copilot-tab-or-default))
 
-;; Org mode addons
+;; Org mode
+(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+(setq org-directory "~/Documents/org/")
 (use-package! org-modern
   :hook (org-mode . org-modern-mode)
   :config
   (setq org-modern-list '((?* . "•") (?+ . "➤") (?- . "➤")))
   (setq org-modern-hide-stars nil)
-  (setq org-modern-table nil)
-  (org-agenda-finalize . org-modern-agenda))
+  ;;(org-agenda-finalize . org-modern-agenda)
+  (setq org-modern-table nil))
 (use-package org-bullets-mode
   :ensure org-bullets
   :config
