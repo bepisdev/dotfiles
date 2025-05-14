@@ -104,3 +104,16 @@
 
   ;; Bind the custom function to <tab> in Evil's insert state
   (evil-define-key 'insert 'global (kbd "<tab>") 'my/copilot-tab-or-default))
+
+;; Org mode addons
+(use-package! org-modern
+  :hook (org-mode . org-modern-mode)
+  :config
+  (setq org-modern-list '((?* . "•") (?+ . "➤") (?- . "➤")))
+  (setq org-modern-hide-stars nil)
+  (setq org-modern-table nil)
+  (org-agenda-finalize . org-modern-agenda))
+(use-package org-bullets-mode
+  :ensure org-bullets
+  :config
+  :hook org-mode)
