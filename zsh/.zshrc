@@ -13,6 +13,7 @@ eval "$(register-python-argcomplete pipx)"
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 export PATH="$PATH:/Users/joshburns/.local/bin"
 export PATH="$PATH:/$(go env GOPATH)/bin"
+export PATH="$PATH:$HOME/.emacs.d/bin"
 
 # Plugins
 zplug "plugins/macos", from:oh-my-zsh
