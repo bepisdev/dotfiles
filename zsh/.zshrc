@@ -40,3 +40,5 @@ if ! zplug check --verbose; then
     fi
 fi
 zplug load
+
+export GPG_TTY=$(tty)
