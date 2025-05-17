@@ -1,5 +1,10 @@
 [user]
 	name = Josh Burns
 	email = joshyburnss@gmail.com
+	signingkey = D5D9C30A1F7C3562
 [init]
 	defaultBranch = main
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
