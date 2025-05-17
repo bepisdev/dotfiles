@@ -54,7 +54,5 @@
   :recipe (:host github :repo "copilot-emacs/copilot.el" :files ("*.el")))
 
 (package! org-modern)
-(package! org-bullets-mode
-  :recipe (:host github :repo "sabof/org-bullets" :files ("*.el")))
 (package! org-modern-indent
   :recipe (:host github :repo "jdtsmith/org-modern-indent" :files ("*.el")))
