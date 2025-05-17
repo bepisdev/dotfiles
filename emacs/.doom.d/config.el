@@ -21,8 +21,8 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "FiraMono Nerd Font Mono" :size 12 :weight 'semi-light)
-     doom-variable-pitch-font (font-spec :family "FiraMono Nerd Font" :size 13))
+(setq doom-font (font-spec :family "Iosevka" :name "Iosevka Fixed" :style "ss09" :size 14 :weight 'medium)
+     doom-variable-pitch-font (font-spec :family "Iosevka" :size 13))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -84,37 +84,23 @@
 ;; Copilot
 ;; accept completion from copilot and fallback to company
 (use-package! copilot
-  :hook (prog-mode . copilot-mode)
   :bind (:map copilot-completion-map
               ("<tab>" . 'copilot-accept-completion)
               ("TAB" . 'copilot-accept-completion)
               ("C-TAB" . 'copilot-accept-completion-by-word)
               ("C-<tab>" . 'copilot-accept-completion-by-word)))
 
-(after! (evil copilot)
-  ;; Define the custom function that either accepts the completion or does the default behavior
-  (defun my/copilot-tab-or-default ()
-    (interactive)
-    (if (and (bound-and-true-p copilot-mode)
-             ;; Add any other conditions to check for active copilot suggestions if necessary
-             )
-        (copilot-accept-completion)
-      (evil-insert 1))) ; Default action to insert a tab. Adjust as needed.
-
-  ;; Bind the custom function to <tab> in Evil's insert state
-  (evil-define-key 'insert 'global (kbd "<tab>") 'my/copilot-tab-or-default))
-
 ;; Org mode
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 (setq org-directory "~/Documents/org/")
 (use-package! org-modern
-  :hook (org-mode . org-modern-mode)
   :config
-  (setq org-modern-list '((?* . "•") (?+ . "➤") (?- . "➤")))
   (setq org-modern-hide-stars nil)
-  ;;(org-agenda-finalize . org-modern-agenda)
-  (setq org-modern-table nil))
-(use-package org-bullets-mode
-  :ensure org-bullets
+  (setq org-modern-table nil)
+  (setq org-modern-list '((?* . "•") (?+ . "➤") (?- . "➤")))
+  :hook
+  (org-mode . org-modern-mode)
+  (org-agenda-finalize . org-modern-agenda))
+(use-package! org-modern-indent
   :config
-  :hook org-mode)
+  (add-hook 'org-mode-hook #'org-modern-indent-mode 90))
