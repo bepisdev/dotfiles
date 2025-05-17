@@ -21,7 +21,8 @@ neofetch,formula,
 ispell,formula,
 stow,formula,
 cmake,formula,
-gpg-suite,cask,
+gpgfrontend,cask,
+free-gpgmail,cask,
 https://github.com/doomemacs/doomemacs,git,$HOME/.emacs.d
 https://github.com/bepisdev/dotfiles,git,$HOME/Code/dotfiles
 
