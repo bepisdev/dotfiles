@@ -10,6 +10,7 @@ source $ZPLUG_HOME/init.zsh
 
 # PATH management
 eval "$(register-python-argcomplete pipx)"
+export PATH="$(brew --prefix rustup)/bin:$PATH"
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 export PATH="$PATH:/Users/joshburns/.local/bin"
 export PATH="$PATH:/$(go env GOPATH)/bin"
