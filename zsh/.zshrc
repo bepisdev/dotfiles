@@ -1,6 +1,7 @@
 # Clean up dotfiles in the current directory tree
 alias dsstoreclean='find . -type f -name .DS_Store -delete'
 alias te="emacs -nw"
+alias e="open -a /Applications/Emacs.app"
 alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
 
 # Load zplug
