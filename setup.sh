@@ -29,12 +29,17 @@ do
     esac
 done
 
-# Create symlinks for dotfiles
-stow zsh -t $HOME
-stow emacs -t $HOME
-stow git -t $HOME
-stow ghostty -t $HOME/Library/Application\ Support/com.mitchellh.ghostty
+# Create directories for later use
+mkdir $HOME/Code
+mkdir -p $HOME/.config
 
-# Run doom emacs setup utility
-~/.emacs.d/bin/doom install
-~/.emacs.d/bin/doom sync
+# Download dotfiles
+DOTFILES_DIR = $HOME/Code/dotfiles
+[! -d "$DOTFILES_DIR"] && git clone git@github.com:bepisdev/dotfiles "$DOTFILES_DIR"
+
+# Install dotfile packages
+pushd $DOTFILES_DIR
+stow zsh -t $HOME
+stow git -t $HOME
+stow nvim -t $HOME/.config
+popd
