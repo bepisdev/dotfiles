@@ -2,6 +2,7 @@ package,type,options
 git,formula,
 git-extras,formula,
 coreutils,formula,
+neovim,formula,
 google-chrome,cask,
 bitwarden,cask,
 microsoft-teams,cask,
