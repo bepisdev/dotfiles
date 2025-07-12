@@ -34,7 +34,7 @@ do
 done
 
 # Install dotfile packages
-pushd $DOTFILES_DIR
+pushd $HOME/Code/dotfiles
 stow zsh -t $HOME
 stow git -t $HOME
 stow nvim -t $HOME/.config/nvim
