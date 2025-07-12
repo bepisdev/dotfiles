@@ -1,8 +1,7 @@
 # Clean up dotfiles in the current directory tree
 alias dsstoreclean='find . -type f -name .DS_Store -delete'
-alias te="emacs -nw"
-alias e="open -a /Applications/Emacs.app"
 alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
+alias vim="nvim"
 
 # Load zplug
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
@@ -15,7 +14,6 @@ export PATH="$(brew --prefix rustup)/bin:$PATH"
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 export PATH="$PATH:/Users/joshburns/.local/bin"
 export PATH="$PATH:/$(go env GOPATH)/bin"
-export PATH="$PATH:$HOME/.emacs.d/bin"
 
 # Shell completions
 fpath=(/Users/joshburns/.docker/completions $fpath)
