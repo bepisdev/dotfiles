@@ -9,6 +9,10 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
 # Download package manifest
 curl https://raw.githubusercontent.com/bepisdev/dotfiles/refs/heads/main/pkg.csv > /tmp/pkg.csv
 
+# Create directories for later use
+mkdir $HOME/Code
+mkdir -p $HOME/.config/nvim
+
 # Process package manifest
 CSV_FILE="/tmp/pkg.csv"
 tail -n +2 "$CSV_FILE" | while IFS=',' read -r pkgname pkgtype clioptions
@@ -29,17 +33,9 @@ do
     esac
 done
 
-# Create directories for later use
-mkdir $HOME/Code
-mkdir -p $HOME/.config
-
-# Download dotfiles
-DOTFILES_DIR = $HOME/Code/dotfiles
-[! -d "$DOTFILES_DIR"] && git clone git@github.com:bepisdev/dotfiles "$DOTFILES_DIR"
-
 # Install dotfile packages
 pushd $DOTFILES_DIR
 stow zsh -t $HOME
 stow git -t $HOME
-stow nvim -t $HOME/.config
+stow nvim -t $HOME/.config/nvim
 popd
