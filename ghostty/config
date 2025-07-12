@@ -1,8 +1,0 @@
-# Run `ghostty +show-config --default --docs` to view a list of
-# all available config options and their default values.
-
-# Font
-font-family = FiraMono Nerd Font
-
-# Always start in $HOME
-working-directory = home
