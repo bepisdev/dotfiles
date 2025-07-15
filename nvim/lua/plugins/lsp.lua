@@ -5,7 +5,7 @@ return {
   { "neovim/nvim-lspconfig" },
 
   -- Mason for managing LSP servers
-  { "williamboman/mason.nvim", config = true },
+  { "williamboman/mason.nvim", opts = {} },
   { "williamboman/mason-lspconfig.nvim", config = true },
 
   -- LSP status, progress, etc.

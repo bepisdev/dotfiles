@@ -15,6 +15,9 @@ vim.wo.number = true
 -- Color support
 vim.opt.termguicolors = true
 
+-- Copy to system clipboard
+vim.api.nvim_set_option("clipboard","unnamed")
+
 -- Lazy.nvim bootstrap (if not already installed)
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
