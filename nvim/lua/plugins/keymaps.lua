@@ -15,6 +15,7 @@ return {
 				{ "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "buffers"},
 				{ "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "help tags"},
 				{ "<leader>fr", "<cmd>Telescope oldfiles<cr>", desc = "recent files"},
+				{ "<leader>fp", "<cmd>Telescope projects<cr>", desc = "projects"},
 			}),
 
 			-- LSP
@@ -23,6 +24,7 @@ return {
 				{ "<leader>li", "<cmd>LspInfo<cr>", desc = "LSP info"},
 				{ "<leader>lr", "<cmd>lua vim.lsp.buf.rename()<cr>", desc = "rename"},
 				{ "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<cr>", desc = "code action"},
+				{ "<leader>lo", "<cmd>Lspsaga outline<cr>", desc = "outline"},
 				{ "<leader>ld", "<cmd>lua vim.lsp.buf.definition()<cr>", desc = "definition"},
 				{ "<leader>lD", "<cmd>lua vim.lsp.buf.declaration()<cr>", desc = "declaration"},
 				{ "<leader>lf", "<cmd>lua vim.lsp.buf.format()<cr>", desc = "format"},

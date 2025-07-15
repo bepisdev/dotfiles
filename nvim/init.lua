@@ -16,32 +16,32 @@ vim.wo.number = true
 vim.opt.termguicolors = true
 
 -- Copy to system clipboard
-vim.api.nvim_set_option("clipboard","unnamed")
+vim.api.nvim_set_option("clipboard", "unnamed")
 
 -- Lazy.nvim bootstrap (if not already installed)
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git", "clone", "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable",
-    lazypath,
-  })
+	vim.fn.system({
+		"git", "clone", "--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable",
+		lazypath,
+	})
 end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  { import = "plugins.core" },
-  { import = "plugins.ui" },
-  { import = "plugins.lsp" },
-  { import = "plugins.treesitter" },
-  { import = "plugins.git" },
-  { import = "plugins.completion" },
-  { import = "plugins.project" },
-  { import = "plugins.terminal" },
-  { import = "plugins.dashboard" },
-  { import = "plugins.telescope_ext" },
-  { import = "plugins.keymaps" },
+	{ import = "plugins.core" },
+	{ import = "plugins.ui" },
+	{ import = "plugins.lsp" },
+	{ import = "plugins.treesitter" },
+	{ import = "plugins.git" },
+	{ import = "plugins.completion" },
+	{ import = "plugins.project" },
+	{ import = "plugins.terminal" },
+	{ import = "plugins.dashboard" },
+	{ import = "plugins.telescope_ext" },
+	{ import = "plugins.keymaps" },
 })
 
 -- Initialize telescope extensions
@@ -49,10 +49,10 @@ require('telescope').load_extension('fzf')
 require('telescope').load_extension('projects')
 
 require("nvim-tree").setup({
-  sync_root_with_cwd = true,
-  respect_buf_cwd = true,
-  update_focused_file = {
-    enable = true,
-    update_root = true
-  },
+	sync_root_with_cwd = true,
+	respect_buf_cwd = true,
+	update_focused_file = {
+		enable = true,
+		update_root = true
+	},
 })
