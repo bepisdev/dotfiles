@@ -15,7 +15,12 @@ return {
 				{ "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "buffers"},
 				{ "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "help tags"},
 				{ "<leader>fr", "<cmd>Telescope oldfiles<cr>", desc = "recent files"},
-				{ "<leader>fp", "<cmd>Telescope projects<cr>", desc = "projects"},
+			}),
+
+			wk.add({
+				{ "<leader>p", group = "+projects"},
+				{ "<leader>pp", "<cmd>Telescope projects<cr>", desc = "switch project"},
+				{ "<leader>pa", "<cmd>AddProject<cr>", desc = "add project"},
 			}),
 
 			-- LSP

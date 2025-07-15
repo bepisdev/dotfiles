@@ -2,7 +2,8 @@
 
 return {
   -- project.nvim for project root detection & switching
-  { "ahmedkhalf/project.nvim",
+  { "DrKJeff16/project.nvim",
+		lazy = false,
 		config = function()
 			require("project_nvim").setup {
 				  show_hidden = true

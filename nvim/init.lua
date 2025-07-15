@@ -15,6 +15,9 @@ vim.wo.number = true
 -- Color support
 vim.opt.termguicolors = true
 
+-- Sign Column
+vim.opt.signcolumn = "yes"
+
 -- Copy to system clipboard
 vim.api.nvim_set_option("clipboard", "unnamed")
 
