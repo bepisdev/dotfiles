@@ -40,5 +40,19 @@ require("lazy").setup({
   { import = "plugins.project" },
   { import = "plugins.terminal" },
   { import = "plugins.dashboard" },
+  { import = "plugins.telescope_ext" },
   { import = "plugins.keymaps" },
+})
+
+-- Initialize telescope extensions
+require('telescope').load_extension('fzf')
+require('telescope').load_extension('projects')
+
+require("nvim-tree").setup({
+  sync_root_with_cwd = true,
+  respect_buf_cwd = true,
+  update_focused_file = {
+    enable = true,
+    update_root = true
+  },
 })

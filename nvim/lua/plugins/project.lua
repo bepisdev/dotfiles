@@ -2,7 +2,13 @@
 
 return {
   -- project.nvim for project root detection & switching
-  { "ahmedkhalf/project.nvim" },
+  { "ahmedkhalf/project.nvim",
+		config = function()
+			require("project_nvim").setup {
+				  show_hidden = true
+			}
+		end,
+	},
 
   -- nvim-tree for file explorer
   { 

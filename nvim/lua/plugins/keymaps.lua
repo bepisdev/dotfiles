@@ -43,15 +43,10 @@ return {
 			wk.add({
 				{ "<leader>t", group = "+toggle"},
 				{ "<leader>te", "<cmd>NvimTreeToggle<cr>", desc = "file explorer"},
+				{ "<leader>tT", "<cmd>Telescope<cr>", desc = "Telescope UI"},
 				{ "<leader>tt", group = "+terminal"},
 				{ "<leader>tth", "<cmd>ToggleTerm size=20 direction=horizontal<cr>", desc = "horizontal terminal"},
 				{ "<leader>ttv", "<cmd>ToggleTerm size=75 direction=vertical<cr>", desc = "vertical terminal"},
-			}),
-
-			-- Project Manager
-			wk.add({
-				{"<leader>p", group = "+project" },
-				{"<leader>p", "<cmd>Telescope projects<cr>", desc = "switch project"},
 			}),
 		}
 	}
