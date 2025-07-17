@@ -33,14 +33,22 @@ return {
     end
   },
 
+	{ 
+		"rafamadriz/friendly-snippets",
+		config = function()
+			require("luasnip.loaders.from_vscode").lazy_load()
+		end
+	},
+
   -- Optional: Copilot (toggleable)
   {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
+		event = "InsertEnter",
     build = ":Copilot auth",
     opts = {
-      suggestion = { enabled = false },
-      panel = { enabled = false },
+      suggestion = { enabled = true },
+      panel = { enabled = true },
     },
   },
   {
