@@ -34,6 +34,9 @@ return {
 				{ "<leader>lD", "<cmd>lua vim.lsp.buf.declaration()<cr>", desc = "declaration"},
 				{ "<leader>lf", "<cmd>lua vim.lsp.buf.format()<cr>", desc = "format"},
 			}),
+			vim.keymap.set('n', '[e', '<cmd>Lspsaga show_line_diagnostics<cr>'),
+			vim.keymap.set('n', ']e', '<cmd>Lspsaga show_buf_diagnostics<cr>'),
+			vim.keymap.set('n', '[a', '<cmd>Lspsaga code_action<cr>'),
 
 			-- Git
 			wk.add({
@@ -54,6 +57,12 @@ return {
 				{ "<leader>tt", group = "+terminal"},
 				{ "<leader>tth", "<cmd>ToggleTerm size=20 direction=horizontal<cr>", desc = "horizontal terminal"},
 				{ "<leader>ttv", "<cmd>ToggleTerm size=75 direction=vertical<cr>", desc = "vertical terminal"},
+			}),
+
+			-- Copilot
+			wk.add({
+				{ "<leader>c", group = "+copilot" },
+				{ "<leader>cc", "<cmd>Copilot panel<cr>", desc="Copilot suggestions" },
 			}),
 		}
 	}
