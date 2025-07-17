@@ -16,6 +16,9 @@ export PATH="$PATH:/Users/joshburns/.local/bin"
 export PATH="$PATH:/Users/joshburns/.composer/vendor/bin"
 export PATH="$PATH:/$(go env GOPATH)/bin"
 
+# Misc. Envirnonment
+export EDITOR="nvim"
+
 # Shell completions
 fpath=(/Users/joshburns/.docker/completions $fpath)
 
