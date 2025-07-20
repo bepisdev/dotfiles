@@ -7,6 +7,12 @@ return {
 		event = "VeryLazy",
 		opts = {},
 		keys = {
+			-- Window Resizing Shortcuts
+			vim.keymap.set('n', '<C-S-Left>', '<cmd>vertical resize +5<cr>'),
+			vim.keymap.set('n', '<C-S-Right>', '<cmd>vertical resize -5<cr>'),
+			vim.keymap.set('n', '<C-S-Up>', '<cmd>resize +5<cr>'),
+			vim.keymap.set('n', '<C-S-Down>', '<cmd>resize -5<cr>'),
+
 			-- Telescope
 			wk.add({
 				{ "<leader>f", group = "+find"},
@@ -35,8 +41,10 @@ return {
 				{ "<leader>lf", "<cmd>lua vim.lsp.buf.format()<cr>", desc = "format"},
 			}),
 			vim.keymap.set('n', '[e', '<cmd>Lspsaga show_line_diagnostics<cr>'),
-			vim.keymap.set('n', ']e', '<cmd>Lspsaga show_buf_diagnostics<cr>'),
+			vim.keymap.set('n', '[E', '<cmd>Lspsaga show_buf_diagnostics<cr>'),
 			vim.keymap.set('n', '[a', '<cmd>Lspsaga code_action<cr>'),
+			vim.keymap.set('n', '[o', '<cmd>Lspsaga outline<cr>'),
+			vim.keymap.set('n', '[d', '<cmd>Lspsaga hover_doc<cr>'),
 
 			-- Git
 			wk.add({
@@ -59,10 +67,11 @@ return {
 				{ "<leader>ttv", "<cmd>ToggleTerm size=75 direction=vertical<cr>", desc = "vertical terminal"},
 			}),
 
-			-- Copilot
+			-- Completion
 			wk.add({
-				{ "<leader>c", group = "+copilot" },
+				{ "<leader>c", group = "+completion" },
 				{ "<leader>cc", "<cmd>Copilot panel<cr>", desc="Copilot suggestions" },
+				{ "<leader>cl", "<cmd>Copilot panel<cr>", desc="Copilot suggestions" },
 			}),
 		}
 	}
