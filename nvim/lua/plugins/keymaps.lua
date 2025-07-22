@@ -61,10 +61,10 @@ return {
 			-- Toggles
 			wk.add({
 				{ "<leader>t",  group = "+terminal" },
-				{ "<leader>tt", "<cmd>ToggleTerm<cr>", desc = "horizontal terminal" },
+				{ "<leader>tt", "<cmd>ToggleTerm<cr>", desc = "show/hide last terminal" },
 				{ "<leader>th", "<cmd>ToggleTerm direction=horizontal<cr>", desc = "horizontal terminal" },
 				{ "<leader>tv", "<cmd>ToggleTerm direction=vertical<cr>",   desc = "vertical terminal" },
-				{ "<leader>tf", "<cmd>ToggleTerm direction=float<cr>",   desc = "vertical terminal" },
+				{ "<leader>tf", "<cmd>ToggleTerm direction=float<cr>",   desc = "float terminal" },
 			}),
 			vim.keymap.set('t', '<esc>', [[<C-\><C-n>]]),
 			vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]]),
