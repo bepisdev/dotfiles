@@ -19,6 +19,9 @@ export PATH="$PATH:/$(go env GOPATH)/bin"
 # Misc. Envirnonment
 export EDITOR="nvim"
 
+# Fix TERM for ssh
+export TERM="xterm-256color"
+
 # Shell completions
 fpath=(/Users/joshburns/.docker/completions $fpath)
 
