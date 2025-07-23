@@ -58,21 +58,27 @@ return {
 				{ "<leader>gd", "<cmd>Gdiffsplit<cr>", desc = "diff" },
 			}),
 
-			-- Toggles
+			-- Terminal
 			wk.add({
 				{ "<leader>t",  group = "+terminal" },
-				{ "<leader>tt", "<cmd>ToggleTerm<cr>", desc = "show/hide last terminal" },
+				{ "<leader>tt", "<cmd>ToggleTerm<cr>",                      desc = "show/hide last terminal" },
 				{ "<leader>th", "<cmd>ToggleTerm direction=horizontal<cr>", desc = "horizontal terminal" },
 				{ "<leader>tv", "<cmd>ToggleTerm direction=vertical<cr>",   desc = "vertical terminal" },
-				{ "<leader>tf", "<cmd>ToggleTerm direction=float<cr>",   desc = "float terminal" },
+				{ "<leader>tf", "<cmd>ToggleTerm direction=float<cr>",      desc = "float terminal" },
 			}),
 			vim.keymap.set('t', '<esc>', [[<C-\><C-n>]]),
 			vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]]),
 
+			-- Toggles
+			vim.keymap.set('n', '<C-t>t', '<cmd>ToggleTerm<cr>'),
+			vim.keymap.set('n', '<C-t>T', '<cmd>Telescope<cr>'),
+
 			-- Completion
 			wk.add({
 				{ "<leader>c",  group = "+completion" },
-				{ "<leader>cc", "<cmd>Copilot panel<cr>", desc = "Copilot suggestions" },
+				{ "<leader>cc", "<cmd>Copilot panel<cr>",        desc = "Copilot panel" },
+				{ "<leader>cs", "<cmd>Copilot suggestion<cr>",   desc = "Copilot suggestions" },
+				{ "<leader>cS", "<cmd>LuaSnipListAvailable<cr>", desc = "List available snippets" },
 			}),
 		}
 	}
