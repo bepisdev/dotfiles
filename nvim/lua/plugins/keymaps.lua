@@ -73,7 +73,6 @@ return {
 			wk.add({
 				{ "<leader>c",  group = "+completion" },
 				{ "<leader>cc", "<cmd>Copilot panel<cr>", desc = "Copilot suggestions" },
-				{ "<leader>cl", "<cmd>Copilot panel<cr>", desc = "Copilot suggestions" },
 			}),
 		}
 	}
