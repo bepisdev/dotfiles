@@ -41,7 +41,7 @@ return {
 					Struct = "",
 					Copilot = "",
 				},
-			}),
+			})
 			-- nvim-cmp configuration
       cmp.setup({
 				formatting = {
