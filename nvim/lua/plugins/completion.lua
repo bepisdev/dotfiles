@@ -24,6 +24,7 @@ return {
           ["<S-Tab>"] = cmp.mapping.select_prev_item(),
         }),
         sources = cmp.config.sources({
+					{ name = "copilot" },
           { name = "nvim_lsp" },
           { name = "luasnip" },
         }, {
@@ -40,25 +41,23 @@ return {
 		end
 	},
 
-  -- Optional: Copilot (toggleable)
+  -- Copilot
   {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
 		event = "InsertEnter",
-    build = ":Copilot auth",
-    opts = {
-      suggestion = { enabled = true },
-      panel = { enabled = true },
-    },
+		config = function()
+			require('copilot').setup({
+				suggestion = { enabled = false },
+				panel = { enabled = false },
+			})
+		end
   },
   {
     "zbirenbaum/copilot-cmp",
-    dependencies = { "copilot.lua" },
+		after = { "copilot.lua" },
     config = function()
       require("copilot_cmp").setup()
-    end,
-    enabled = function()
-      return vim.g.copilot_enabled or false
-    end,
+    end
   },
 }
