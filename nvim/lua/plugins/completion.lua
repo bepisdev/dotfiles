@@ -9,10 +9,50 @@ return {
       { "hrsh7th/cmp-cmdline" },
       { "L3MON4D3/LuaSnip" },
       { "saadparwaiz1/cmp_luasnip" },
+      { "onsails/lspkind.nvim" },
     },
     config = function()
       local cmp = require("cmp")
+			local lspkind = require("lspkind")
+			-- lspkind configuration
+			lspkind.init({
+				symbol_map = {
+					Text = "",
+					Method = "ƒ",
+					Function = "",
+					Constructor = "",
+					Field = "",
+					Variable = "",
+					Class = "",
+					Interface = "ﰮ",
+					Module = "",
+					Property = "",
+					Unit = "",
+					Value = "",
+					Enum = "",
+					Keyword = "",
+					Snippet = "",
+					Color = "",
+					File = "",
+					Reference = "",
+					Folder = "ﱮ",
+					EnumMember = "",
+					Constant = "",
+					Struct = "",
+					Copilot = "",
+				},
+			}),
+			-- nvim-cmp configuration
       cmp.setup({
+				formatting = {
+					format = lspkind.cmp_format({
+						mode = "symbol_text",
+						maxwidth = 50,
+						abbr = 50,
+						ellipsis_char = "...",
+						show_labelDetails = true,
+					}),
+				},
         snippet = {
           expand = function(args)
             require("luasnip").lsp_expand(args.body)
@@ -29,6 +69,7 @@ return {
           { name = "luasnip" },
         }, {
           { name = "buffer" },
+          { name = "path" },
         }),
       })
     end
