@@ -76,9 +76,8 @@ return {
 			-- Completion
 			wk.add({
 				{ "<leader>c",  group = "+completion" },
-				{ "<leader>cc", "<cmd>Copilot panel<cr>",        desc = "Copilot panel" },
-				{ "<leader>cs", "<cmd>Copilot suggestion<cr>",   desc = "Copilot suggestions" },
-				{ "<leader>cS", "<cmd>LuaSnipListAvailable<cr>", desc = "List available snippets" },
+				{ "<leader>cs", "<cmd>LuaSnipListAvailable<cr>", desc = "List available snippets" },
+				{ "<leader>cS", "<cmd>CmpStatus<cr>", desc = "nvim-cmp status" },
 			}),
 		}
 	}
