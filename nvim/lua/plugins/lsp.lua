@@ -2,7 +2,7 @@
 
 return {
   -- LSP Config
-  { "neovim/nvim-lspconfig" },
+  { "neovim/nvim-lspconfig"	},
 
   -- Mason for managing LSP servers
   { "williamboman/mason.nvim", opts = {} },

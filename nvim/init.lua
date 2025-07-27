@@ -59,3 +59,7 @@ require("nvim-tree").setup({
 		update_root = true
 	},
 })
+
+require("lspconfig").bashls.setup({
+	filetypes = { "sh", "bash", "zsh" },
+})
