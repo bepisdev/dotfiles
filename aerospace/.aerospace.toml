@@ -15,10 +15,10 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     cmd-alt-h = []
 
     # Ghostty
-    alt-enter = '''exec-and-forget open -na /Applications/Ghostty.app'''
+    alt-enter = '''exec-and-forget open -a /Applications/Ghostty.app'''
 
     # Open terminal with Vim
-    ctrl-enter = '''exec-and-forget open -na /Applications/Ghostty.app --args -e nvim'''
+    ctrl-enter = '''exec-and-forget open -a /Applications/Ghostty.app --args -e nvim'''
 
     # i3 wraps focus by default
     alt-j =         'focus --boundaries-action wrap-around-the-workspace left'
