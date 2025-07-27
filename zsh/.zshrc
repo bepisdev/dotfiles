@@ -10,7 +10,6 @@ source $ZPLUG_HOME/init.zsh
 
 # Shell completion for UV
 eval "$(uv generate-shell-completion zsh)"
-eval "$(uvx generate-shell-completion zsh)"
 
 # PATH management
 export PATH="$(brew --prefix rustup)/bin:$PATH"
