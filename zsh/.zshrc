@@ -5,24 +5,10 @@ alias vim="nvim"
 
 # Load zplug
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
-export ZPLUG_HOME=/opt/homebrew/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
 # Shell completion for UV
 eval "$(uv generate-shell-completion zsh)"
-
-# PATH management
-export PATH="$(brew --prefix rustup)/bin:$PATH"
-export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
-export PATH="$PATH:/Users/joshburns/.local/bin"
-export PATH="$PATH:/Users/joshburns/.composer/vendor/bin"
-export PATH="$PATH:/$(go env GOPATH)/bin"
-
-# Misc. Envirnonment
-export EDITOR="nvim"
-
-# Fix TERM for ssh
-export TERM="xterm-256color"
 
 # Shell completions
 fpath=(/Users/joshburns/.docker/completions $fpath)
@@ -50,4 +36,3 @@ if ! zplug check --verbose; then
 fi
 zplug load
 
-export GPG_TTY=$(tty)

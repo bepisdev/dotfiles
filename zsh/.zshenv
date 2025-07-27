@@ -1,0 +1,18 @@
+# Zplug
+export ZPLUG_HOME=/opt/homebrew/opt/zplug
+
+# $PATH overrides
+export PATH="$(brew --prefix rustup)/bin:$PATH"
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+export PATH="$PATH:/Users/joshburns/.local/bin"
+export PATH="$PATH:/Users/joshburns/.composer/vendor/bin"
+export PATH="$PATH:/$(go env GOPATH)/bin"
+
+# Ghostty $TERM fix
+export TERM="xterm-256color"
+
+# Default $EDITOR
+export EDITOR="nvim"
+
+# GPG load
+export GPG_TTY=$(tty)
