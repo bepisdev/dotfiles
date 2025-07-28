@@ -13,4 +13,7 @@ return {
 
   -- LSP UI enhancements
   { "glepnir/lspsaga.nvim", branch = "main", config = true },
+
+	-- Vim API polyfill for Lua
+	{ "folke/lazydev.nvim", ft = "lua", config = true }
 }
