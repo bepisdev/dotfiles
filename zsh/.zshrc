@@ -21,6 +21,7 @@ zplug "plugins/common-aliases", from:oh-my-zsh
 zplug "zsh-users/zsh-history-substring-search", as:plugin
 zplug "zsh-users/zsh-syntax-highlighting", as:plugin
 zplug "spaceship-prompt/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
+zplug "bepisdev/zshclean", from:github
 
 # Install plugins if there are plugins that have not been installed
 autoload -U promptinit; promptinit
