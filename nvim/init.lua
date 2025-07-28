@@ -44,6 +44,7 @@ require("lazy").setup({
 	{ import = "plugins.terminal" },
 	{ import = "plugins.dashboard" },
 	{ import = "plugins.telescope_ext" },
+	{ import = "plugins.prose" },
 	{ import = "plugins.keymaps" },
 })
 

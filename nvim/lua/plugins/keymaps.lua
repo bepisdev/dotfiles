@@ -79,6 +79,14 @@ return {
 				{ "<leader>cs", "<cmd>LuaSnipListAvailable<cr>", desc = "List available snippets" },
 				{ "<leader>cS", "<cmd>CmpStatus<cr>", desc = "nvim-cmp status" },
 			}),
+
+			-- Prose and Document editing
+			wk.add({
+				{ "<leader>d",  group = "prose and document editing" },
+				{ "<leader>dd",  "<cmd>ZenMode<cr>", desc = "Toggle ZenMode" },
+				{ "<leader>dt",  "<cmd>Twilight<cr>", desc = "Toggle Twilight" },
+				{ "<leader>dm",  "<cmd>MarkdownPreviewToggle<cr>", desc = "Toggle Markdown Preview" },
+			})
 		}
 	}
 }
