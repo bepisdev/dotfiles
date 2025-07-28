@@ -2,7 +2,6 @@
 export ZPLUG_HOME=/opt/homebrew/opt/zplug
 
 # $PATH overrides
-export PATH="$(brew --prefix rustup)/bin:$PATH"
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 export PATH="$PATH:/Users/joshburns/.local/bin"
 export PATH="$PATH:/Users/joshburns/.composer/vendor/bin"
