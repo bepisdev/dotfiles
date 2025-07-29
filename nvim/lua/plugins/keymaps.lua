@@ -7,6 +7,9 @@ return {
 		event = "VeryLazy",
 		opts = {},
 		keys = {
+			-- Telescope
+			wk.add({{"<leader><space>", "<cmd>Telescope<cr>", desc="Telescope"}}),
+
 			-- Window Resizing Shortcuts
 			vim.keymap.set('n', '<C-S-Left>', '<cmd>vertical resize +5<cr>'),
 			vim.keymap.set('n', '<C-S-Right>', '<cmd>vertical resize -5<cr>'),
