@@ -18,6 +18,10 @@ vim.opt.termguicolors = true
 -- Sign Column
 vim.opt.signcolumn = "yes"
 
+-- Term Colors
+vim.opt.termguicolors = true
+vim.cmd("colorscheme ryuuko")
+
 -- Copy to system clipboard
 vim.api.nvim_set_option("clipboard", "unnamed")
 
