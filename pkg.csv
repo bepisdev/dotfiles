@@ -31,5 +31,8 @@ tree-sitter,formula,
 uv,formula,
 zplug,formula,
 zsh,formula,
+yt-dlp,formula,
+curl,formula,
+git-flow-avh,formula,
 
 https://github.com/bepisdev/dotfiles,git,$HOME/Code/dotfiles
