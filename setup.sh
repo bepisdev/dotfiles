@@ -38,4 +38,5 @@ pushd $HOME/Code/dotfiles
 stow zsh -t $HOME
 stow git -t $HOME
 stow nvim -t $HOME/.config/nvim
+stow ghostty -t $HOME/.config/ghostty
 popd
