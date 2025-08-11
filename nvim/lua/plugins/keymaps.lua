@@ -26,6 +26,7 @@ vim.keymap.set('n', '[a', '<cmd>Lspsaga code_action<cr>')
 vim.keymap.set('n', '[o', '<cmd>Lspsaga outline<cr>')
 vim.keymap.set('n', '[d', '<cmd>Lspsaga hover_doc<cr>')
 
+
 -- Terminal Mode <ESC> support
 vim.keymap.set('t', '<esc>', [[<C-\><C-n>]])
 vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]])
@@ -74,12 +75,8 @@ return {
 			-- Git
 			wk.add({
 				{ "<leader>g",  group = "+git" },
-				{ "<leader>gs", "<cmd>Git<cr>",        desc = "status" },
-				{ "<leader>gc", "<cmd>Git commit<cr>", desc = "commit" },
-				{ "<leader>gp", "<cmd>Git push<cr>",   desc = "push" },
-				{ "<leader>gl", "<cmd>Git pull<cr>",   desc = "pull" },
-				{ "<leader>gb", "<cmd>Git blame<cr>",  desc = "blame" },
-				{ "<leader>gd", "<cmd>Gdiffsplit<cr>", desc = "diff" },
+				{ "<leader>gg", "<cmd>LazyGit<cr>",            desc = "LazyGit" },
+				{ "<leader>gl", "<cmd>LazyGitCurrentFile<cr>", desc = "LazyGit Current File" },
 			}),
 
 			-- Terminal
