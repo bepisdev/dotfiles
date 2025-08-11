@@ -7,6 +7,9 @@ export PATH="$PATH:/Users/joshburns/.local/bin"
 export PATH="$PATH:/Users/joshburns/.composer/vendor/bin"
 export PATH="$PATH:/$(go env GOPATH)/bin"
 
+# Perl modules
+export PERL5LIB="/Users/joshburns/perl5/lib/perl5/"
+
 # Ghostty $TERM fix
 export TERM="xterm-256color"
 
