@@ -1,6 +1,8 @@
-vim.cmd("colorscheme ryuuko")
+-- Load core configurations
+require("config.options")
+require("config.autocmds")
 
--- Lazy.nvim bootstrap (if not already installed)
+-- Lazy.nvim bootstrap
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
@@ -27,3 +29,10 @@ require("lazy").setup({
 	{ import = "plugins.prose" },
 	{ import = "plugins.keymaps" },
 })
+
+-- Load post-plugin configurations
+require('config.lsp-servers')
+require('config.nvim-tree')
+require('config.telescope')
+
+vim.cmd("colorscheme ryuuko")
