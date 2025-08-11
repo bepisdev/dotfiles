@@ -1,6 +1,13 @@
 -- Keymaps and which-key configuration module
 
 local wk = require("which-key")
+local Terminal = require('toggleterm.terminal').Terminal
+local lazygit = Terminal:new({ cmd = "lazygit", hidden = true })
+
+function _lazygit_toggle()
+	lazygit:toggle()
+end
+
 return {
 	{
 		"folke/which-key.nvim",
@@ -68,6 +75,7 @@ return {
 				{ "<leader>th", "<cmd>ToggleTerm direction=horizontal<cr>", desc = "horizontal terminal" },
 				{ "<leader>tv", "<cmd>ToggleTerm direction=vertical<cr>",   desc = "vertical terminal" },
 				{ "<leader>tf", "<cmd>ToggleTerm direction=float<cr>",      desc = "float terminal" },
+				{ "<leader>tg", _lazygit_toggle,             desc = "git terminal" },
 			}),
 			vim.keymap.set('t', '<esc>', [[<C-\><C-n>]]),
 			vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]]),
