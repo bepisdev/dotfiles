@@ -13,20 +13,34 @@ local function _lazygit_toggle()
 	lazygit:toggle()
 end
 
+-- Window Resizing Shortcuts
+vim.keymap.set('n', '<C-S-Left>', '<cmd>vertical resize +5<cr>')
+vim.keymap.set('n', '<C-S-Right>', '<cmd>vertical resize -5<cr>')
+vim.keymap.set('n', '<C-S-Up>', '<cmd>resize +5<cr>')
+vim.keymap.set('n', '<C-S-Down>', '<cmd>resize -5<cr>')
+
+-- LSP Saga Shortcuts
+vim.keymap.set('n', '[e', '<cmd>Lspsaga show_line_diagnostics<cr>')
+vim.keymap.set('n', '[E', '<cmd>Lspsaga show_buf_diagnostics<cr>')
+vim.keymap.set('n', '[a', '<cmd>Lspsaga code_action<cr>')
+vim.keymap.set('n', '[o', '<cmd>Lspsaga outline<cr>')
+vim.keymap.set('n', '[d', '<cmd>Lspsaga hover_doc<cr>')
+
+-- Terminal Mode <ESC> support
+vim.keymap.set('t', '<esc>', [[<C-\><C-n>]])
+vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]])
+
+-- Toggle Terminal from Normal
+vim.keymap.set('n', '<C-t>t', '<cmd>ToggleTerm<cr>')
+
 return {
-	{
+{
 		"folke/which-key.nvim",
 		event = "VeryLazy",
 		opts = {},
 		keys = {
 			-- Telescope
 			wk.add({{"<leader><space>", "<cmd>Telescope<cr>", desc="Telescope"}}),
-
-			-- Window Resizing Shortcuts
-			vim.keymap.set('n', '<C-S-Left>', '<cmd>vertical resize +5<cr>'),
-			vim.keymap.set('n', '<C-S-Right>', '<cmd>vertical resize -5<cr>'),
-			vim.keymap.set('n', '<C-S-Up>', '<cmd>resize +5<cr>'),
-			vim.keymap.set('n', '<C-S-Down>', '<cmd>resize -5<cr>'),
 
 			-- Telescope
 			wk.add({
@@ -56,11 +70,6 @@ return {
 				{ "<leader>lD", "<cmd>lua vim.lsp.buf.declaration()<cr>", desc = "declaration" },
 				{ "<leader>lf", "<cmd>lua vim.lsp.buf.format()<cr>",      desc = "format" },
 			}),
-			vim.keymap.set('n', '[e', '<cmd>Lspsaga show_line_diagnostics<cr>'),
-			vim.keymap.set('n', '[E', '<cmd>Lspsaga show_buf_diagnostics<cr>'),
-			vim.keymap.set('n', '[a', '<cmd>Lspsaga code_action<cr>'),
-			vim.keymap.set('n', '[o', '<cmd>Lspsaga outline<cr>'),
-			vim.keymap.set('n', '[d', '<cmd>Lspsaga hover_doc<cr>'),
 
 			-- Git
 			wk.add({
@@ -80,27 +89,21 @@ return {
 				{ "<leader>th", "<cmd>ToggleTerm direction=horizontal<cr>", desc = "horizontal terminal" },
 				{ "<leader>tv", "<cmd>ToggleTerm direction=vertical<cr>",   desc = "vertical terminal" },
 				{ "<leader>tf", "<cmd>ToggleTerm direction=float<cr>",      desc = "float terminal" },
-				{ "<leader>tg", _lazygit_toggle,             desc = "git terminal" },
+				{ "<leader>tg", _lazygit_toggle,														desc = "git terminal" },
 			}),
-			vim.keymap.set('t', '<esc>', [[<C-\><C-n>]]),
-			vim.keymap.set('t', '<C-w>', [[<C-\><C-n><C-w>]]),
-
-			-- Toggles
-			vim.keymap.set('n', '<C-t>t', '<cmd>ToggleTerm<cr>'),
-			vim.keymap.set('n', '<C-t>T', '<cmd>Telescope<cr>'),
 
 			-- Completion
 			wk.add({
 				{ "<leader>c",  group = "+completion" },
 				{ "<leader>cs", "<cmd>LuaSnipListAvailable<cr>", desc = "List available snippets" },
-				{ "<leader>cS", "<cmd>CmpStatus<cr>", desc = "nvim-cmp status" },
+				{ "<leader>cS", "<cmd>CmpStatus<cr>",						 desc = "nvim-cmp status" },
 			}),
 
 			-- Prose and Document editing
 			wk.add({
 				{ "<leader>d",  group = "prose and document editing" },
-				{ "<leader>dd",  "<cmd>ZenMode<cr>", desc = "Toggle ZenMode" },
-				{ "<leader>dt",  "<cmd>Twilight<cr>", desc = "Toggle Twilight" },
+				{ "<leader>dd",  "<cmd>ZenMode<cr>",							 desc = "Toggle ZenMode" },
+				{ "<leader>dt",  "<cmd>Twilight<cr>",							 desc = "Toggle Twilight" },
 				{ "<leader>dm",  "<cmd>MarkdownPreviewToggle<cr>", desc = "Toggle Markdown Preview" },
 			})
 		}
