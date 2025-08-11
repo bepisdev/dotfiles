@@ -2,16 +2,6 @@
 
 local wk = require("which-key")
 local Terminal = require('toggleterm.terminal').Terminal
-local lazygit = Terminal:new({
-	cmd = "lazygit",
-	direction="float",
-	float_opts= { border = "double" },
-	hidden = true
-})
-
-local function _lazygit_toggle()
-	lazygit:toggle()
-end
 
 -- Window Resizing Shortcuts
 vim.keymap.set('n', '<C-S-Left>', '<cmd>vertical resize +5<cr>')
