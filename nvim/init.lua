@@ -98,3 +98,8 @@ vim.api.nvim_create_autocmd({ "Filetype" }, {
     end
   end,
 })
+
+-- Obj-c LSP
+require('lspconfig').clangd.setup {
+	filetypes = { 'c', 'cpp', 'objective-c', 'objc', 'objcpp' },
+}
