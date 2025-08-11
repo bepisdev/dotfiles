@@ -1,3 +1,25 @@
+-- Initialization of Language Server Protocol (LSP) servers in Neovim
+local servers = {
+  tsserver = {},  -- TypeScript/JavaScript
+  html = {}, -- HTML
+  cssls = {}, -- CSS
+  jsonls = {}, -- JSON
+  pyright = {}, -- Python
+  gopls = {}, -- Go
+  rust_analyzer = {}, -- Rust
+  dockerls = {}, -- Dockerfiles
+  yamlls = {}, -- YAML
+  bashls = {}, -- Shell Scripting
+  lua_ls = {}, -- Lua
+  clangd = {}, -- C/C++/Objective-C/Swift
+}
+
+for server, config in pairs(servers) do
+  require('lspconfig')[server].setup(config)
+end
+
+-- Individual LSP Server Configurations and Overrides
+
 -- Shell Scripting LSP (Bash, Zsh)
 require("lspconfig").bashls.setup({
     filetypes = { "sh", "bash", "zsh" },
