@@ -17,4 +17,13 @@ return {
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = true
 	},
+
+	-- Remote file editing
+	{
+    'chipsenkbeil/distant.nvim',
+    branch = 'v0.3',
+    config = function()
+        require('distant'):setup()
+    end
+	}
 }

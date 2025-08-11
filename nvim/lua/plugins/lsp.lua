@@ -15,5 +15,8 @@ return {
   { "glepnir/lspsaga.nvim", branch = "main", config = true },
 
 	-- Vim API polyfill for Lua
-	{ "folke/lazydev.nvim", ft = "lua", config = true }
+	{ "folke/lazydev.nvim", ft = "lua", config = true },
+
+	-- Caddyfile syntax
+	{ "isobit/vim-caddyfile" }
 }
