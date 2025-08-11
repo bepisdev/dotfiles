@@ -1,6 +1,6 @@
 -- Initialization of Language Server Protocol (LSP) servers in Neovim
 local servers = {
-  tsserver = {},  -- TypeScript/JavaScript
+  ts_ls = {},  -- TypeScript/JavaScript
   html = {}, -- HTML
   cssls = {}, -- CSS
   jsonls = {}, -- JSON
