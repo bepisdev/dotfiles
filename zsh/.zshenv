@@ -8,6 +8,10 @@ export PATH="$PATH:/Users/joshburns/.composer/vendor/bin"
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 export PATH="$PATH:/$(go env GOPATH)/bin"
 
+# Use ruby from Homebrew
+export LDFLAGS="-L/usr/local/opt/ruby/lib"
+export CPPFLAGS="-I/usr/local/opt/ruby/include"
+
 # Perl modules
 export PERL5LIB="/Users/joshburns/perl5/lib/perl5/"
 
