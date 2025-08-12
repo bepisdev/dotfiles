@@ -12,6 +12,7 @@ local servers = {
   bashls = {}, -- Shell Scripting
   lua_ls = {}, -- Lua
   clangd = {}, -- C/C++/Objective-C/Swift
+  ruby_lsp = {}, -- Ruby
 }
 
 for server, config in pairs(servers) do
