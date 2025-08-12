@@ -1,3 +1,6 @@
+# Reload environment
+source ~/.zshenv
+
 # Clean up dotfiles in the current directory tree
 alias dsstoreclean='find . -type f -name .DS_Store -delete'
 alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
