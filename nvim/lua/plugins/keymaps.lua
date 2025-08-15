@@ -76,7 +76,6 @@ return {
 				{ "<leader>th", "<cmd>ToggleTerm direction=horizontal<cr>", desc = "horizontal terminal" },
 				{ "<leader>tv", "<cmd>ToggleTerm direction=vertical<cr>",   desc = "vertical terminal" },
 				{ "<leader>tf", "<cmd>ToggleTerm direction=float<cr>",      desc = "float terminal" },
-				{ "<leader>tg", _lazygit_toggle,														desc = "git terminal" },
 			}),
 
 			-- Completion
