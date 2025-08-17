@@ -1,18 +1,8 @@
 -- Initialization of Language Server Protocol (LSP) servers in Neovim
 local servers = {
-  ts_ls = {},  -- TypeScript/JavaScript
-  html = {}, -- HTML
-  cssls = {}, -- CSS
-  jsonls = {}, -- JSON
-  pyright = {}, -- Python
-  gopls = {}, -- Go
-  rust_analyzer = {}, -- Rust
-  dockerls = {}, -- Dockerfiles
-  yamlls = {}, -- YAML
   bashls = {}, -- Shell Scripting
   lua_ls = {}, -- Lua
   clangd = {}, -- C/C++/Objective-C/Swift
-  ruby_lsp = {}, -- Ruby
 }
 
 for server, config in pairs(servers) do

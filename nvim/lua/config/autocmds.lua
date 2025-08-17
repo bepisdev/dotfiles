@@ -16,3 +16,5 @@ autocmd({ "Filetype" }, {
 })
 
 
+-- Specific ruby indentaion fix
+vim.cmd([[autocmd FileType ruby setlocal indentkeys-=.]])
