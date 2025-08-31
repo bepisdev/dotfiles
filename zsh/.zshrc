@@ -5,6 +5,7 @@ source ~/.zshenv
 alias dsstoreclean='find . -type f -name .DS_Store -delete'
 alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
 alias vim="nvim"
+alias get_idf='. $HOME/esp/esp-idf/export.sh'
 
 # Load zplug
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
@@ -37,3 +38,11 @@ if ! zplug check --verbose; then
 fi
 zplug load
 
+
+
+# Herd injected PHP binary.
+export PATH="/Users/joshburns/Library/Application Support/Herd/bin/":$PATH
+
+
+# Herd injected PHP 8.2 configuration.
+export HERD_PHP_82_INI_SCAN_DIR="/Users/joshburns/Library/Application Support/Herd/config/php/82/"
