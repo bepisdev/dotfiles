@@ -2,7 +2,15 @@
 
 return {
   -- LSP Config
-  { "neovim/nvim-lspconfig"	},
+  {
+    "neovim/nvim-lspconfig",
+    opts = function (_, opts)
+      local esp32 = require("esp32")
+      opts.servers = opts.servers or {}
+      opts.servers.clangd = esp32.lsp_config()
+      return opts
+    end
+  },
 
   -- Mason for managing LSP servers
   { "williamboman/mason.nvim", opts = {} },
@@ -18,5 +26,8 @@ return {
 	{ "folke/lazydev.nvim", ft = "lua", config = true },
 
 	-- Caddyfile syntax
-	{ "isobit/vim-caddyfile" }
+	{ "isobit/vim-caddyfile" },
+
+  -- esp32 specific development
+  { "Aietes/esp32.nvim" },
 }
