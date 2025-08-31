@@ -75,7 +75,7 @@ return {
     end
   },
 
-	{ 
+	{
 		"rafamadriz/friendly-snippets",
 		config = function()
 			require("luasnip.loaders.from_vscode").lazy_load()
@@ -88,7 +88,7 @@ return {
     cmd = "Copilot",
 		config = function()
 			require('copilot').setup({
-				suggestion = { enabled = true },
+				suggestion = { enabled = false },
 				panel = { enabled = false },
 			})
 		end
@@ -97,7 +97,7 @@ return {
     "zbirenbaum/copilot-cmp",
 		after = { "copilot.lua" },
 		event = { "InsertEnter", "LspAttach" },
-    fix_pairs = true,
+    fix_pairs = false,
     config = function()
       require("copilot_cmp").setup()
     end
