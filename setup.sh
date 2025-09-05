@@ -10,8 +10,8 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
 brew bundle ./Brewfile
 
 # Install dotfile packages
-mkdir -p $HOME/.config/{nvim,ghostty}
-stow zsh -t $HOME
-stow git -t $HOME
-stow nvim -t $HOME/.config/nvim
-stow ghostty -t $HOME/.config/ghostty
+mkdir -p "$HOME/.config/nvim"
+
+stow zsh -t "$HOME"
+stow git -t "$HOME"
+stow nvim -t "$HOME/.config/nvim"
