@@ -5,7 +5,10 @@ source ~/.zshenv
 alias dsstoreclean='find . -type f -name .DS_Store -delete'
 alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
 alias vim="nvim"
-alias get_idf='. $HOME/esp/esp-idf/export.sh'
+function get_idf {
+  source "$HOME/esp/esp-idf/export.sh"
+  alias idf="idf.py -B build.clang"
+}
 
 # Load zplug
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
