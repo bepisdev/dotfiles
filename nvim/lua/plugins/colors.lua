@@ -1,10 +1,14 @@
-vim.opt.termguicolors = true
-
 return {
   {
-    "LazyVim/LazyVim",
+    "thesimonho/kanagawa-paper.nvim",
+    lazy = false,
+    priority = 1000,
+    init = function() end,
+  },
+  {
+    "LaztyVim/LazyVim",
     opts = {
-      colorscheme = function() end,
+      colorscheme = "kanagawa-paper-ink",
     },
   },
 }

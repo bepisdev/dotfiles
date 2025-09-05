@@ -10,6 +10,6 @@ config.font_size = 15.0
 config.font = wezterm.font("IosevkaTerm Nerd Font Mono")
 
 -- Color scheme
-config.color_scheme = "Red Planet"
+config.color_scheme = "Kanagawa (Gogh)"
 
 return config
