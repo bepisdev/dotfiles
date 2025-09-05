@@ -14,4 +14,5 @@ mkdir -p "$HOME/.config/nvim"
 
 stow zsh -t "$HOME"
 stow git -t "$HOME"
+stow wezterm -t "$HOME"
 stow nvim -t "$HOME/.config/nvim"
