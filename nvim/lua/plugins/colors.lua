@@ -6,7 +6,7 @@ return {
     init = function() end,
   },
   {
-    "LaztyVim/LazyVim",
+    "LazyVim/LazyVim",
     opts = {
       colorscheme = "kanagawa-paper-ink",
     },
