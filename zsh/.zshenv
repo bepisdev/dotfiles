@@ -5,7 +5,7 @@ export ZPLUG_HOME=/opt/homebrew/opt/zplug
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 export PATH="$PATH:/Users/joshburns/.local/bin"
 export PATH="$PATH:/Users/joshburns/.composer/vendor/bin"
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export PATH="$(gem environment gemdir)/bin:$PATH"
 export PATH="$PATH:/$(go env GOPATH)/bin"
 
 # Use ruby from Homebrew
@@ -23,3 +23,4 @@ export EDITOR="nvim"
 
 # GPG load
 export GPG_TTY=$(tty)
+export PATH="/opt/homebrew/opt/ruby@3.3/bin:$PATH"
