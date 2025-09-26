@@ -2,6 +2,7 @@
 source ~/.zshenv
 
 # Clean up dotfiles in the current directory tree
+alias shreset="source ~/.zshrc"
 alias dsstoreclean='find . -type f -name .DS_Store -delete'
 alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
 alias vim="nvim"
@@ -40,12 +41,3 @@ if ! zplug check --verbose; then
     fi
 fi
 zplug load
-
-
-
-# Herd injected PHP binary.
-export PATH="/Users/joshburns/Library/Application Support/Herd/bin/":$PATH
-
-
-# Herd injected PHP 8.2 configuration.
-export HERD_PHP_82_INI_SCAN_DIR="/Users/joshburns/Library/Application Support/Herd/config/php/82/"
