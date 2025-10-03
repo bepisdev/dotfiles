@@ -10,5 +10,8 @@ killall Finder
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# Install Homebrew
+# Install Homebrew packages
 brew bundle ./Brewfile
+
+# Run stow
+stow -t $HOME home
