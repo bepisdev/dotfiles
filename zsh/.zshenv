@@ -6,10 +6,6 @@ export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 export PATH="$PATH:/Users/joshburns/.local/bin"
 export PATH="$PATH:/$(go env GOPATH)/bin"
 
-# Use ruby from Homebrew
-export LDFLAGS="-L/usr/local/opt/ruby/lib"
-export CPPFLAGS="-I/usr/local/opt/ruby/include"
-
 # Perl modules
 export PERL5LIB="/Users/joshburns/perl5/lib/perl5/"
 
@@ -21,3 +17,8 @@ export EDITOR="nvim"
 
 # GPG load
 export GPG_TTY=$(tty)
+
+# Ruby build
+export LDFLAGS=""
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@3)"
+

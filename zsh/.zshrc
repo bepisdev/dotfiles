@@ -1,6 +1,8 @@
 # Reload environment
 source ~/.zshenv
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Clean up dotfiles in the current directory tree
 alias shreset="source ~/.zshrc"
 alias dsstoreclean='find . -type f -name .DS_Store -delete'
@@ -13,15 +15,11 @@ function get_idf {
 
 # Load zplug
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
+fpath+=("$HOME/.rbenv/completions")
 source $ZPLUG_HOME/init.zsh
 
-# Shell completion for UV
-eval "$(uv generate-shell-completion zsh)"
-
-# Shell completions
-fpath=(/Users/joshburns/.docker/completions $fpath)
-
 # Plugins
+fpath=(/Users/joshburns/.docker/completions $fpath)
 zplug "plugins/macos", from:oh-my-zsh
 zplug "plugins/git", from:oh-my-zsh
 zplug "plugins/git-extras", from:oh-my-zsh
@@ -41,3 +39,6 @@ if ! zplug check --verbose; then
     fi
 fi
 zplug load
+
+eval "$(rbenv init - --no-rehash zsh)"
+eval "$(uv generate-shell-completion zsh)"
