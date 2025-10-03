@@ -2,9 +2,9 @@ tap "bepisdev/homebrew", "git@github.com:bepisdev/homebrew.git"
 tap "nikitabobko/tap"
 tap "romankurnovskii/awesome-brew"
 
+
 brew "awk"
 brew "node"
-brew "bash-language-server"
 brew "cmake"
 brew "coreutils"
 brew "fd"
@@ -29,7 +29,6 @@ brew "zplug"
 brew "zsh"
 brew "bepisdev/homebrew/sshmux"
 
-cask "aerospace"
 cask "bitwarden"
 cask "docker-desktop"
 cask "font-fira-mono-nerd-font"
