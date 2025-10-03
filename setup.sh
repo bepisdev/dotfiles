@@ -9,10 +9,6 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
 # Install Homebrew
 brew bundle ./Brewfile
 
-# Install dotfile packages
-mkdir -p "$HOME/.config/nvim"
-
 stow zsh -t "$HOME"
 stow git -t "$HOME"
 stow wezterm -t "$HOME"
-stow nvim -t "$HOME/.config/nvim"
