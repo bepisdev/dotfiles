@@ -7,7 +7,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 alias shreset="source ~/.zshrc"
 alias dsstoreclean='find . -type f -name .DS_Store -delete'
 alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
-alias vim="nvim"
+
 function get_idf {
   source "$HOME/esp/esp-idf/export.sh"
   alias idf="idf.py -B build.clang"
