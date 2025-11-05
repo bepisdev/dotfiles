@@ -1,10 +1,11 @@
 #!/bin/sh
 
-# Disable .DS_Store files
+# Update macOS defaults
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
-
-# Set finder to show dotfiles
-defaults write com.apple.finder AppleShowAllFiles true
+defaults write com.apple.desktopservices DSDontWriteUSBStores -bool TRUE
+defaults write com.apple.desktopservices DSDontWriteCDStores -bool TRUE
+defaults write com.apple.desktopservices DSDontWriteLocalStores -bool TRUE
+defaults write com.apple.finder AppleShowAllFiles -bool TRUE
 killall Finder
 
 # Install Homebrew
