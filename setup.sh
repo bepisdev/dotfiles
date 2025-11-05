@@ -14,5 +14,11 @@ killall Finder
 # Install Homebrew packages
 brew bundle ./Brewfile
 
+# Set zsh as the default shell
+chsh -s /bin/zsh
+
 # Run stow
 stow -t $HOME home
+
+# Download wallpapers
+git clone https://github.com/bepisdev/wallpapers.git $HOME/Pictures/wallpapers
