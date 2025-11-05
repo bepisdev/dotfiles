@@ -10,7 +10,7 @@ export PATH="$PATH:/$(go env GOPATH)/bin"
 export PERL5LIB="/Users/joshburns/perl5/lib/perl5/"
 
 # Default $EDITOR
-export EDITOR="zed"
+export EDITOR="vim"
 
 # GPG load
 export GPG_TTY=$(tty)
