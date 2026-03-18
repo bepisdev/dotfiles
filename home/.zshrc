@@ -42,3 +42,4 @@ zplug load
 
 eval "$(rbenv init - --no-rehash zsh)"
 eval "$(uv generate-shell-completion zsh)"
+export PATH="/opt/homebrew/opt/openssl@3.5/bin:$PATH"
