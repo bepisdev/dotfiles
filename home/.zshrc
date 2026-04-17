@@ -6,7 +6,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # Clean up dotfiles in the current directory tree
 alias shreset="source ~/.zshrc"
 alias dsstoreclean='find . -type f -name .DS_Store -delete'
-alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
 
 # Load zplug
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
@@ -35,12 +34,11 @@ if ! zplug check --verbose; then
 fi
 zplug load
 
+# Shims
 eval "$(rbenv init - --no-rehash zsh)"
 eval "$(uv generate-shell-completion zsh)"
 export PATH="/opt/homebrew/opt/openssl@3.5/bin:$PATH"
 
-# Go binaries
+# PATH overrides
 export PATH=$(go env GOPATH)/bin:$PATH
-
-# Added by Antigravity
 export PATH="/Users/joshburns/.antigravity/antigravity/bin:$PATH"
