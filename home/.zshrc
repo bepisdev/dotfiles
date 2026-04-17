@@ -8,11 +8,6 @@ alias shreset="source ~/.zshrc"
 alias dsstoreclean='find . -type f -name .DS_Store -delete'
 alias sail='sh $([ -f sail ] && echo sail || echo vendor/bin/sail)'
 
-function get_idf {
-  source "$HOME/esp/esp-idf/export.sh"
-  alias idf="idf.py -B build.clang"
-}
-
 # Load zplug
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
 fpath+=("$HOME/.rbenv/completions")
@@ -43,3 +38,9 @@ zplug load
 eval "$(rbenv init - --no-rehash zsh)"
 eval "$(uv generate-shell-completion zsh)"
 export PATH="/opt/homebrew/opt/openssl@3.5/bin:$PATH"
+
+# Go binaries
+export PATH=$(go env GOPATH)/bin:$PATH
+
+# Added by Antigravity
+export PATH="/Users/joshburns/.antigravity/antigravity/bin:$PATH"
